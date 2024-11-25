@@ -1,0 +1,40 @@
+/*
+Expt no.:2 task 2
+Title: WAP to find sum of all the odd numbers between numbers entered by the user.
+Name : Shaikh Sumaiya
+Class : First year	
+Div : C
+UIN : 21P066
+*/
+#include<stdio.h>
+int main (){
+    int start_num,end_num,sum=0,i;
+    printf("\t\tTO FIND ADDITION OF ODD NUMBERS\n\n");
+    printf("Enter a number to start with : ");
+    scanf("%d",&start_num);
+    printf("Enter a number to end with :");
+    scanf("%d",&end_num);
+
+    for(i=start_num;i<=end_num;i++)
+    {
+
+        if(i%2!=0)
+        {
+
+            sum=i+sum;
+        }
+    }
+    printf("\nADDITION OF ODD NUMBERS FROM %d TO %d IS %d",
+           start_num,end_num,sum);
+
+    return 0;
+}
+/*Output
+  TO FIND ADDITION OF ODD NUMBERS
+
+Enter a number to start with : 2
+Enter a number to end with :6
+
+ADDITION OF ODD NUMBERS FROM 2 TO 6 IS 8
+Process returned 0 (0x0)   execution time : 3.272 s
+Press any key to continue.
