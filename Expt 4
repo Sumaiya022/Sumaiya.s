@@ -1,0 +1,46 @@
+/*
+Experiment no.4
+Title : WAP to find all the prime numbers between two numbers using functions
+Name : Shaikh Sumaiya
+Class : First year	
+Div : C
+UIN : 241P066
+*/
+#include<stdio.h>
+
+    int isPrime(int num){
+    if (num<2)return 0;
+    for (int i=2;i*i<=num;i++){
+        if(num%i==0)
+            return 0;
+    }
+     return 1;
+    }
+    void findPrimes(int start,int end){
+    printf("prime numbers between %d and %d are :",start,end);
+    for (int i=start;i<=end;i++){
+        if(isPrime(i)){
+            printf("%d",i);
+        }
+    }
+     printf("\n");
+    }
+
+    int main(){
+        int start,end;
+        printf("Enter the start number :");
+        scanf("%d",&start);
+        printf("Enter the end number :");
+        scanf("%d",&end);
+
+         findPrimes(start,end);
+
+         return 0;
+    }
+*/Output
+Enter the start number :2
+Enter the end number :12
+prime numbers between 2 and 12 are :235711
+
+Process returned 0 (0x0)   execution time : 4.431 s
+Press any key to continue.
