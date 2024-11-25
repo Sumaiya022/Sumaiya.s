@@ -1,0 +1,40 @@
+/*
+Expt No. : 6
+Title : WAP to define a counter function to print how many times the function is called using storage classes.
+Name : Shaikh Sumaiya
+Class : First year
+Div : C	
+UIN : 241P066
+*/
+#include<stdio.h>
+/*Function to be count*/
+int counter (){
+    static int count =0; //Static variable to retain its value across calls
+    count++;
+    return count;
+}
+int main (){
+    int n,i,a;
+    printf("\t***NO. OF TIMES A FUNCTION IS CALLED***\n");
+    /*Take input from the user for the numbers of times to call the function*/
+    printf("\n Enter the number of times to call the function : ");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++)
+    {
+         a=counter();
+    }
+    printf("\n Function has been called %d times",a);
+    printf("\n\n");
+    return 0;
+}
+/*Output
+***NO. OF TIMES A FUNCTION IS CALLED***
+
+ Enter the number of times to call the function : 6
+
+ Function has been called 6 times
+
+
+Process returned 0 (0x0)   execution time : 2.153 s
+Press any key to continue.
