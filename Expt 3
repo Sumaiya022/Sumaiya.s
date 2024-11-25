@@ -1,0 +1,98 @@
+/*
+Expt no. : 3
+Title : WAP to design a menu driven calculator using switch and goto.
+Name : Shaikh Sumaiya
+Class : First year	
+Div : C
+UIN : 241P066
+*/
+
+#include<stdio.h>
+int main()
+{
+    float N1,N2,R;
+    char OP,CC;
+
+    printf("\n\t\t ***CALCULATOR***\n\n");
+    printf("Enter");
+    printf("\n + for Addition\n - for Subtraction\n * for Multiplication\n / for Division\n \%% for Remainder\n");
+
+            repeat :    /*LABLE*/
+
+    printf("\n\t\t  |NEW OPERATION|\n");
+    printf("\n Choice of operation :");
+    scanf("%c",&OP);
+    printf(" Enter Operands\n");
+    printf("Number 1 : ");
+    scanf("%f",&N1);
+    printf("Number 2 : ");
+    scanf("%f",&N2);
+
+    switch(OP)
+           {
+           case '+' :
+            R=N1+N2;
+            printf("\n %.2f %c %.2f  = %.2f",N1,OP,N2,R);
+            break;
+           case '-' :
+           R=N1-N2;
+           printf("\n%.2f %c %.2f = %.2f",N1,OP,N2,R);
+           break;
+           case  '*' :
+            R=N1*N2;
+            printf("\n%.2f %c %.2f = %.2f",N1,OP,N2,R);
+            break;
+           case  '/'  :
+            if(N1!=0 && N2 !=0)
+               {
+                 R=N1/N2;
+                printf("\n %.2f %c %.2f = %.2f",N1,OP,N2,R);
+               }
+               else
+                   printf("\n we cannot devide by zero");
+               break;
+           default :
+                printf("\n Choose valid");
+                break;
+           }
+           printf("\n\n Do you want to continue (y/n) : ");
+           scanf(" %c",&CC);
+           if(CC=='y' ||  CC=='Y')  /*Loop condition*/
+            goto repeat;
+           printf("\n");
+           return 0;
+}
+
+                 ***CALCULATOR***
+
+Enter
+ + for Addition
+ - for Subtraction
+ * for Multiplication
+ / for Division
+ % for Remainder
+
+                  |NEW OPERATION|
+
+ Choice of operation :+
+ Enter Operands
+Number 1 : 5
+Number 2 : 2
+
+ 5.00 + 2.00  = 7.00
+
+ Do you want to continue (y/n) : y
+
+                  |NEW OPERATION|
+
+ Choice of operation : Enter Operands
+Number 1 : 6
+Number 2 : 2
+
+ Choose valid
+
+ Do you want to continue (y/n) : n
+
+
+Process returned 0 (0x0)   execution time : 31.461 s
+Press any key to continue.
