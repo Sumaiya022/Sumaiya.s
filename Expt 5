@@ -1,0 +1,48 @@
+/*
+Expt no.5
+Title : WAP to find the factorial of a number using iterative and recursive function.
+Name : Shaikh Sumaiya
+Class : First year	
+Div : C
+UIN : 241P066
+*/
+
+//Function to calculate factorial-iteration
+int factorialiterative(int num){
+    int result = 1;
+    for(int i= 1;i<=num;i++){
+        result*=i; //Multiply result by each number from 1 to num
+    }
+    return result;
+}
+//Function to calculate factorial-recursion
+int factorialRecursive(int num){
+if (num==0||num==1){
+    return 1;//Base case :0! and 1! are both 1
+}else{
+return num *factorialRecursive(num -1);//Recursively multiply num by (num -1)!
+
+}
+}
+int main (){
+    int num;
+
+    //Ask the user for a number
+    printf("Enter a number : ");
+    scanf("%d",&num);
+
+    //Calculate and print the factorial-iterative function
+    printf("Factorial of %d by iterative method : %d\n",num,factorialiterative(num));
+
+    //Calculate and print the factorial-recursive function
+    printf("Fcatorial of %d by recursive method : %d\n",num,factorialRecursive(num));
+
+    return 0;
+}
+*/Output
+Enter a number : 5
+Factorial of 5 by iterative method : 120
+Fcatorial of 5 by recursive method : 120
+
+Process returned 0 (0x0)   execution time : 1.813 s
+Press any key to continue.
